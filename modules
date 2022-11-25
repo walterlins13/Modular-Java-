@@ -1,0 +1,80 @@
+package mod1Q4;
+
+import java.util.Scanner;
+
+public class Mod {
+	public static void menu() {
+		System.out.println("Opções:");
+		System.out.println("1 = Cubo");
+		System.out.println("2 = Paralelepípedo");
+		System.out.println("3 = Esfera");
+		System.out.println("4 = Cilindro");
+		System.out.println("5 = Encerrar programa");
+	}
+	public static double volcubo(double lado) {
+		double vol;
+		vol = Math.pow(lado, 3);
+		return vol;
+	}
+	public static double volparalel(double largura, double altura, double comp) {
+		double vol;
+		vol = comp * largura * altura;
+		return vol;
+	}
+	public static double volesfera(double raio) {
+		double vol;
+		vol = (4.0 / 3.0) * Math.PI * Math.pow(raio, 3);
+		return vol;
+	}
+	public static double volcilindro(double altura, double raio) {
+		double vol;
+		vol = Math.PI * altura * Math.pow(raio, 2);
+		return vol;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		int opçao;
+        double lado, volumes, altura, comp, largura, raio;
+		
+		do {
+			System.out.println("");
+			System.out.println("Programa para cálculo de volumes");
+			System.out.println("");
+			menu();
+			System.out.println("");
+			System.out.println("Informe aqui a opção desejada:");
+			opçao = in.nextInt();
+			if(opçao == 1) {
+				System.out.println("Informe aqui o valor do lado do cubo:");
+			    lado = in.nextDouble();
+			    volumes = volcubo(lado);
+			    System.out.println("Volume do cubo: " + volumes);
+			}
+			if(opçao == 2) {
+				System.out.println("Informe aqui a altura do paralelepípedo:");
+				altura = in.nextDouble();
+				System.out.println("Informe aqui o comprimento do paralelepípedo:");
+				comp = in.nextDouble();
+				System.out.println("Informe aqui a largura do paralelepípedo:");
+				largura = in.nextDouble();
+				volumes = volparalel(largura, altura, comp);
+				System.out.println("Volume do paralelepípedo: " + volumes);
+			}
+			if(opçao == 3) {
+				System.out.println("Informe aqui o raio da esfera:");
+				raio = in.nextDouble();
+				volumes = volesfera(raio);
+				System.out.println("Volume da esfera: " + volumes);
+			}
+			if(opçao == 4) {
+				System.out.println("Informe aqui a altura do cilindro:");
+				altura = in.nextDouble();
+				System.out.println("Informe aqui o raio da base do cilindro:");
+				raio = in.nextDouble();
+				volumes = volcilindro(altura, raio);
+				System.out.println("Volume do cilindro: " + volumes);
+			}
+		}while(opçao != 5);
+    }
+ }
