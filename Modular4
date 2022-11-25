@@ -44,11 +44,11 @@ public class mod {
         c = maior;
         System.out.println("Valores ordenados:");
         System.out.println("");
-        System.out.println("A: " + a);
+        System.out.println("A = " + a);
         System.out.println("");
-        System.out.println("B: " + b);
+        System.out.println("B = " + b);
         System.out.println("");
-        System.out.println("C: " + c);
+        System.out.println("C = " + c);
     }
 	public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
