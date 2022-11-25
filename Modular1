@@ -46,7 +46,7 @@ public class Mod {
 			System.out.println("Informe aqui a opção desejada:");
 			opçao = in.nextInt();
 			if(opçao == 1) {
-				System.out.println("Informe aqui o valor do lado do cubo:");
+		            System.out.println("Informe aqui o valor do lado do cubo:");
 			    lado = in.nextDouble();
 			    volumes = volcubo(lado);
 			    System.out.println("Volume do cubo: " + volumes);
@@ -76,5 +76,5 @@ public class Mod {
 				System.out.println("Volume do cilindro: " + volumes);
 			}
 		}while(opçao != 5);
-    }
+        }
  }
