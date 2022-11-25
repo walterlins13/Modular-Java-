@@ -1,61 +1,54 @@
-package zModulação1;
+package lista3RepetiçãoQ1;
 
 import java.util.Scanner;
 
-public class Mod {
-	public static void menu() {
-            System.out.println("");
-	    System.out.println("Opções de conversão disponíveis:");
-	    System.out.println("Opção 1 = Conversão para dólar");
-	    System.out.println("Opção 2 = conversão para real");
-	    System.out.println("");
-	    System.out.println("Informe qual será a opção desejada:");
-	}
-	public static double transdolar(double real) {
-	    double cotadolar, vdolar;
-	    cotadolar = 5.40;
-	    vdolar = real / cotadolar;
-	    return vdolar;
-	}	
-        public static double transreal(double dolar) {
-    	    double vreal, cotadolar;
-    	    cotadolar = 4.82;
-    	    vreal = dolar * cotadolar;
-    	    return vreal;
-        }
+public class Salário {
+
 	public static void main(String[] args) {
-            Scanner in = new Scanner(System.in);
-            double real, transf, dolar;
-            char resp2;
-	    int resp;
-        do {
-    	    System.out.println("Programa para conversão de moedas");
-            menu();
-            resp = in.nextInt();
-	    if(resp == 1) {
-	        System.out.println("Informe o valor em reais a ser convertido:");
-		real = in.nextDouble();
-		transf = transdolar(real);
-		System.out.println("Valor em dólares: " + transf);
-	    }
-	    if(resp == 2) {
-		System.out.println("Informe o valor em dólares a ser convertido:");
-		dolar = in.nextDouble();
-		transf = transreal(dolar);
-		System.out.println("Valor em reais: " + transf);
-	    }
-	    System.out.println();
-	    System.out.println("Deseja encerrar a execução do programa?");
-	    resp2 = in.next().charAt(0);
-	    resp2 = Character.toLowerCase(resp2);
-	    while(resp2 != 'n' && resp2 != 's') {
-	    	System.out.println("Resposta inválida. Por favor, tente novamente:");
-	    	resp2 = in.next().charAt(0);
-		resp2 = Character.toLowerCase(resp2);
-	    }
-	}while(resp2 == 'n');
+		// TODO Auto-generated method stub
+        Scanner in = new Scanner(System.in);
+	    double sal, aumento, novosal;
+	    char resp;
+	    do { 
+	    	System.out.println("Programa para cálculo de salário");
+	    	System.out.println("");
+	    	System.out.println("Informe o atual salário do funcionário em questão: ");
+	    	sal = in.nextDouble(); 
+	    	while(sal < 1212) {
+	    		System.out.println("Salário inválido. Digite outro valor: ");
+	    	    sal = in.nextDouble();
+	    	}
+	    	if(sal > 4000) {
+	    		aumento = (5.0 / 100) * sal;
+	    		novosal = sal + aumento;
+	    		System.out.println("O funcionário terá um aumento de R$" + aumento + " e passará a receber R$" + novosal);
+	    	}
+	    	if(sal > 2500 && sal <= 4000) {
+	    		aumento = (10.0 / 100) * sal;
+	    		novosal = sal + aumento;
+	    		System.out.println("O funcionário terá um aumento de R$" + aumento + " e passará a receber R$" + novosal);
+	    	}
+	    	if(sal > 1500 && sal <= 2500) {
+	    		aumento = (15.0 / 100) * sal;
+	    		novosal = sal + aumento;
+	    		System.out.println("O funcionário terá um aumento de R$" + aumento + " e passará a receber R$" + novosal);	
+	    	}
+	    	if(sal <= 1500) {
+	    		aumento = (20.0 / 100) * sal;
+	    		novosal = sal + aumento;
+	    		System.out.println("");
+	    		System.out.println("O funcionário terá um aumento de R$" + aumento + " e passará a receber R$" + novosal);
+	    	}
+	    	System.out.println("Deseja calcular o salário de outro funcionário?");
+	    	resp = in.next().charAt(0);
+	    	resp = Character.toLowerCase(resp);
+	    	while(resp != 's' && resp != 'n') {
+	    		System.out.println("Resposta inválida. Digite s/n (sim ou não):");
+	    		resp = in.next().charAt(0);
+		    	resp = Character.toLowerCase(resp);
+	    	}
+	    }while(resp == 's'); 
 	
-	
-   }
+	}
 
 }
