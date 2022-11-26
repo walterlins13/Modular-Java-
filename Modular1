@@ -39,6 +39,7 @@ public class Mod {
 		
 		System.out.println("Programa para cálculo de volumes");
 		do {
+			System.out.println("");
 			menu();
 			System.out.println("");
 			System.out.println("Informe aqui a opção desejada:");
