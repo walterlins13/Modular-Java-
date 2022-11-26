@@ -28,9 +28,8 @@ public class Mod {
         char resp;
         int conversao;
         
-        do {
-        	System.out.println("");
-        	System.out.println("Programa de conversão de temperaturas");
+        System.out.println("Programa de conversão de temperaturas");
+	do {
         	System.out.println("");
         	menu();
         	conversao = in.nextInt();
