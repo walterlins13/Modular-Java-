@@ -37,10 +37,8 @@ public class Mod {
 		int opçao;
         double lado, volumes, altura, comp, largura, raio;
 		
+		System.out.println("Programa para cálculo de volumes");
 		do {
-			System.out.println("");
-			System.out.println("Programa para cálculo de volumes");
-			System.out.println("");
 			menu();
 			System.out.println("");
 			System.out.println("Informe aqui a opção desejada:");
